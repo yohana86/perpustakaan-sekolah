@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title><?php echo e($title . ' - Perpustakaan Admin' ?? 'Perpustakaan Admin'); ?></title>
+
+    <!-- Custom fonts for this template-->
+    <link href="<?php echo e(asset('assets/css/fontawesome.min.css')); ?>" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="<?php echo e(asset('assets/css/sb-admin-2.min.css')); ?>" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript-->
+    <script defer src="<?php echo e(asset('assets/js/jquery.min.js')); ?>"></script>
+    <script defer src="<?php echo e(asset('assets/js/bootstrap.bundle.min.js')); ?>"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script defer src="<?php echo e(asset('assets/js/jquery.easing.min.js')); ?>"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script defer src="<?php echo e(asset('assets/js/sb-admin-2.min.js')); ?>"></script>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <?php echo $__env->make('layouts.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <?php echo $__env->make('layouts.topbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800"><?php echo e($title ?? 'Perpustakaan'); ?></h1>
+                    </div>
+
+                    <?php echo e($slot); ?>
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Made by <a href="https://instagram.com/yo_ann_2/" target="_blank">Yohanuuullll</a></span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <?php echo $__env->yieldContent('scripts'); ?>
+</body>
+
+</html>
+<?php /**PATH C:\xampp\htdocs\perpustakaan-sekolah\resources\views/layouts/admin.blade.php ENDPATH**/ ?>
